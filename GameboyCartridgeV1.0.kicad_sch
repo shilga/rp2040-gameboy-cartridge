@@ -1,0 +1,48 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 29c97174-46f8-4c48-b4a7-5a1e45e73b0e)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 46.99 107.95) (size 30.48 31.75) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 1eed7487-ede3-48fa-a47f-671585e72d34)
+    (property "Sheetname" "Power" (at 46.99 107.2384 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "power.kicad_sch" (at 46.99 140.2846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "GameboyCartridgeV1.0"
+        (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 45.72 54.61) (size 29.21 34.29) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 7814998b-2ec4-4ba1-81ae-f3ffbead2be9)
+    (property "Sheetname" "Digital" (at 45.72 53.8984 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "digital.kicad_sch" (at 45.72 89.4846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "GameboyCartridgeV1.0"
+        (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e" (page "2"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
