@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Gameboy")(type "KiCad")(uri "${KIPRJMOD}/../../../Lib/Gameboy/Footprints")(options "")(descr ""))
+  (lib (name "Misc")(type "KiCad")(uri "${KIPRJMOD}/../../../Lib/misc/Footprints")(options "")(descr ""))
+  (lib (name "SnapEDA")(type "KiCad")(uri "${KIPRJMOD}/../../../Lib/SnapEDA")(options "")(descr ""))
+)

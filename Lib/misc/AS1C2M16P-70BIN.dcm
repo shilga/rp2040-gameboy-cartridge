@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AS1C2M16P-70BIN
+D SRAM 32M 2Mx16 3V 70ns Pseudo SRAM IT
+K
+F 
+$ENDCMP
+#
+#End Doc Library

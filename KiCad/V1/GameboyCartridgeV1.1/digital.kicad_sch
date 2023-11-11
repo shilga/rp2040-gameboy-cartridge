@@ -1372,12 +1372,13 @@
     (uuid f88dab82-e54b-421e-b9e8-1a2dd9bd293b)
   )
 
-  (no_connect (at 48.26 33.02) (uuid 0494fc69-3dae-4313-9dbf-85cfba7c24c1))
   (no_connect (at 270.51 97.79) (uuid 48ac1b68-07b6-47ca-bad5-60d722eab976))
+  (no_connect (at 48.26 53.34) (uuid 4d0d88cc-66ed-4baa-b253-03a38bf555da))
   (no_connect (at 262.89 38.1) (uuid 55743fae-b5d3-4dbe-8d2d-2d7eb4cec8fb))
-  (no_connect (at 48.26 53.34) (uuid 7bb6e70d-d86c-49d0-8690-6a729f0133d6))
-  (no_connect (at 48.26 55.88) (uuid b42ece16-0ae4-4cca-af03-62b4d11ef278))
-  (no_connect (at 48.26 30.48) (uuid bd33c759-9743-4532-aa84-72097f406b31))
+  (no_connect (at 193.04 146.05) (uuid 8d63087d-8107-4fce-8228-fba3c3374adc))
+  (no_connect (at 48.26 55.88) (uuid 9be07d30-1834-4fc8-81ed-bb5d07f4e1b2))
+  (no_connect (at 48.26 33.02) (uuid d78f5669-1942-4516-9f4d-db7c54ace6f1))
+  (no_connect (at 48.26 30.48) (uuid f013f79f-3f54-4f5c-9db6-a9e9d13214b5))
 
   (bus_entry (at 204.47 125.73) (size 2.54 2.54)
     (stroke (width 0) (type default))
@@ -2066,10 +2067,6 @@
     (stroke (width 0) (type default))
     (uuid baa704ea-44b1-4dbd-884b-8a72535ecf1d)
   )
-  (wire (pts (xy 193.04 146.05) (xy 195.58 146.05))
-    (stroke (width 0) (type default))
-    (uuid bb8f70d5-7d43-4aad-b726-e363ff92d19c)
-  )
   (wire (pts (xy 262.89 25.4) (xy 264.16 25.4))
     (stroke (width 0) (type default))
     (uuid bbebf7f5-cd86-4261-b382-2394f222d200)
@@ -2555,13 +2552,6 @@
       (effects (font (size 1.27 1.27)) hide)
     )
   )
-  (global_label "USB_ID" (shape input) (at 195.58 146.05 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid b6cbec28-b7bd-4404-be0f-50ce951ae5b2)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 205.1382 146.05 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
   (global_label "SWDIO" (shape bidirectional) (at 264.16 27.94 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid bc75f263-180e-4349-baf0-b807b0de40e9)
@@ -2636,26 +2626,29 @@
   (symbol (lib_id "LED:WS2812B") (at 262.89 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 01118f26-bc23-42aa-8b83-f1c3b10a27ff)
-    (property "Reference" "D3" (at 273.1879 94.9579 0)
+    (property "Reference" "D1" (at 273.1879 94.9579 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "WS2812B" (at 273.1879 96.8789 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" (at 264.16 105.41 0)
+    (property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" (at 264.16 105.41 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" (at 265.43 107.315 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (property "LCSC" "C2761795" (at 262.89 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 91dfc9d6-a269-4955-b079-ff23f42b9cd8))
     (pin "2" (uuid 8bb4db5a-7d65-44ff-beb6-f8fb65c30de7))
     (pin "3" (uuid afb49da8-34d5-4366-8fa5-2ca92701f035))
     (pin "4" (uuid 6054f269-939c-47d4-aad2-9ec7c7e59cfe))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "D3") (unit 1)
+          (reference "D1") (unit 1)
         )
       )
     )
@@ -2679,12 +2672,12 @@
     (pin "1" (uuid cc16068c-e9fd-4484-9c9e-7df1d8a40a3a))
     (pin "2" (uuid 70cec256-ad0b-4d39-85e5-609e48196e13))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "C6") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -2705,6 +2698,9 @@
     (property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" (at 36.83 40.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C2927037" (at 33.02 40.64 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "A1" (uuid 230439bf-377c-4170-8040-66b2f5884eba))
     (pin "A12" (uuid 4bb8be39-fc48-4060-8f41-4adc541aba17))
     (pin "A4" (uuid 41878374-cb62-4080-91ed-35a79fbd8b01))
@@ -2723,7 +2719,7 @@
     (pin "B9" (uuid 2ef5f54e-9364-4bea-bbf2-a0a4f8834e73))
     (pin "S1" (uuid 33d85776-7e76-4de9-9623-41ce868abac8))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "J1") (unit 1)
         )
@@ -2734,7 +2730,7 @@
   (symbol (lib_id "power:GND") (at 156.21 60.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0f45d3ab-5709-49bd-aff0-ca60d1b63f35)
-    (property "Reference" "#PWR065" (at 156.21 67.31 0)
+    (property "Reference" "#PWR013" (at 156.21 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 156.337 65.3542 0)
@@ -2748,9 +2744,9 @@
     )
     (pin "1" (uuid 704204f6-1ee8-4a26-8b1e-8b86e7181248))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR065") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -2759,7 +2755,7 @@
   (symbol (lib_id "power:GND") (at 278.13 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 14cfb914-30ac-4752-8a51-66137be813ad)
-    (property "Reference" "#PWR062" (at 284.48 93.98 0)
+    (property "Reference" "#PWR028" (at 284.48 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 282.5242 93.853 0)
@@ -2773,9 +2769,9 @@
     )
     (pin "1" (uuid 59916d93-015f-4698-993e-4faaf4d6055d))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR062") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
     )
@@ -2784,7 +2780,7 @@
   (symbol (lib_id "power:+3V3") (at 264.16 24.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1ba85b73-eae8-4ccb-9eb9-6d5a206990ff)
-    (property "Reference" "#PWR025" (at 264.16 27.94 0)
+    (property "Reference" "#PWR027" (at 264.16 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 264.541 19.7358 0)
@@ -2798,9 +2794,9 @@
     )
     (pin "1" (uuid 574d9173-ffe5-4195-87e5-07d09aefaefe))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -2809,7 +2805,7 @@
   (symbol (lib_id "power:+3V3") (at 170.18 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 26818e33-1ffc-4dee-be31-2e3684e4fd12)
-    (property "Reference" "#PWR017" (at 170.18 60.96 0)
+    (property "Reference" "#PWR016" (at 170.18 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 170.18 53.34 0)
@@ -2823,9 +2819,9 @@
     )
     (pin "1" (uuid fe454016-908d-4190-b2e7-fe27a4f44316))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -2840,16 +2836,19 @@
     (property "Value" "SW_Push" (at 257.9624 148.59 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Button_Switch_SMD:SW_SPST_PTS810" (at 257.81 148.59 0)
+    (property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342" (at 257.81 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 257.81 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C2886898" (at 262.89 148.59 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid c05a91b8-2d17-4613-b469-8afdb86fd2d7))
     (pin "2" (uuid 748baef1-b773-4330-927a-b6d37f0e9abf))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "SW1") (unit 1)
         )
@@ -2875,12 +2874,12 @@
     (pin "1" (uuid e6393143-71d8-4cbc-b5fd-bbdd6026c69b))
     (pin "2" (uuid 1f1211ea-6183-4b76-a700-e427caba8039))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "C5") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -2903,7 +2902,7 @@
     )
     (pin "1" (uuid 5a65c6c5-081a-4c6b-812b-70f4a80ee125))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "#PWR019") (unit 1)
         )
@@ -2914,7 +2913,7 @@
   (symbol (lib_id "Device:R") (at 252.73 62.23 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 32f4903f-f850-43f6-a515-055b3498227f)
-    (property "Reference" "R8" (at 252.73 56.9722 90)
+    (property "Reference" "R5" (at 252.73 56.9722 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10R" (at 252.73 59.2836 90)
@@ -2929,9 +2928,9 @@
     (pin "1" (uuid 9df17e35-9c18-4c2e-9442-b2e523ee7a0a))
     (pin "2" (uuid 7ad4f690-2d0f-4e18-8808-9df706b5a931))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "R8") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -2940,7 +2939,7 @@
   (symbol (lib_id "power:GND") (at 186.69 60.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 34c8be5b-8cda-448d-8730-b97fedb2de3e)
-    (property "Reference" "#PWR067" (at 186.69 67.31 0)
+    (property "Reference" "#PWR018" (at 186.69 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 186.817 65.3542 0)
@@ -2954,9 +2953,9 @@
     )
     (pin "1" (uuid f4c72e1b-3921-45fe-92a2-876bfc320256))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR067") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -2965,7 +2964,7 @@
   (symbol (lib_id "power:GND") (at 262.89 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 38e21adb-ca24-436a-b9a9-cb02606f0eb0)
-    (property "Reference" "#PWR024" (at 262.89 161.29 0)
+    (property "Reference" "#PWR026" (at 262.89 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 263.017 159.3342 0)
@@ -2979,9 +2978,9 @@
     )
     (pin "1" (uuid bb969da0-64db-4473-9fe9-201dfb192079))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -2990,7 +2989,7 @@
   (symbol (lib_id "MCU_RaspberryPi:RP2040") (at 167.64 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 39dbf5ac-3562-49f1-8a0f-4087b266695a)
-    (property "Reference" "U3" (at 169.6594 151.8904 0)
+    (property "Reference" "U2" (at 169.6594 151.8904 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "RP2040" (at 169.6594 154.4273 0)
@@ -3000,6 +2999,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf" (at 167.64 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C2040" (at 167.64 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d132f3b7-bf22-4819-a717-4da50a6a6994))
@@ -3060,16 +3062,16 @@
     (pin "8" (uuid 3f3ea81d-827b-4294-9bce-9cb8a3adbff6))
     (pin "9" (uuid 8f5ad435-f0f0-4dd9-a521-352dfe8670e8))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "U3") (unit 1)
+          (reference "U2") (unit 1)
         )
       )
     )
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x06") (at 257.81 30.48 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 3a265bad-2fbd-4aec-b2a8-36e8e76db171)
     (property "Reference" "J3" (at 259.8928 19.8882 0)
       (effects (font (size 1.27 1.27)))
@@ -3090,7 +3092,7 @@
     (pin "5" (uuid b651b6c0-de34-4c38-ad16-ed79a1878830))
     (pin "6" (uuid be8dcc1e-9ea9-4f09-b1c8-666141d29f30))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "J3") (unit 1)
         )
@@ -3115,12 +3117,12 @@
     )
     (pin "1" (uuid ac3f4b9e-4049-4a9f-adc1-e14629986a7e))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "#PWR014") (unit 1)
         )
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -3144,12 +3146,12 @@
     (pin "1" (uuid c1b3d833-e030-4de0-b302-7fc037789e22))
     (pin "2" (uuid 105282cd-27a1-4c13-a25d-dfbf3da61e82))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "C7") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -3158,7 +3160,7 @@
   (symbol (lib_id "power:GND") (at 152.4 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3ccf7d7c-5ffa-47d9-aee8-10acfcb1b471)
-    (property "Reference" "#PWR018" (at 152.4 38.1 0)
+    (property "Reference" "#PWR012" (at 152.4 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 152.527 36.1442 0)
@@ -3172,9 +3174,9 @@
     )
     (pin "1" (uuid a9db65e8-161d-4d58-bdb0-2ebc58587b93))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -3197,7 +3199,7 @@
     )
     (pin "1" (uuid 647a51cc-4863-4489-a1c1-b49ef1ce3e3b))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "#PWR01") (unit 1)
         )
@@ -3220,10 +3222,13 @@
     (property "Datasheet" "~" (at 127 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C1644" (at 127 125.73 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid c0fb1a06-6dbb-47a9-80f6-194eb82ae7a6))
     (pin "2" (uuid 787ad12c-72b2-4b90-9d5f-09bba5c1b0d3))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
@@ -3237,7 +3242,7 @@
   (symbol (lib_id "power:+3V3") (at 177.8 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 40c99db9-a316-4b27-a010-052d76f310e7)
-    (property "Reference" "#PWR066" (at 177.8 53.34 0)
+    (property "Reference" "#PWR017" (at 177.8 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 177.8 45.72 0)
@@ -3251,9 +3256,9 @@
     )
     (pin "1" (uuid 20e164ed-aaed-4f87-85be-cc7bd1e41d34))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR066") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -3262,7 +3267,7 @@
   (symbol (lib_id "power:GND") (at 262.89 106.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 40f90d09-adf6-468b-a17c-a27b1fd28a05)
-    (property "Reference" "#PWR061" (at 262.89 113.03 0)
+    (property "Reference" "#PWR024" (at 262.89 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 263.017 111.0742 0)
@@ -3276,9 +3281,9 @@
     )
     (pin "1" (uuid 05f682c8-7332-486f-ba0e-44d9be5f483e))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR061") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -3302,12 +3307,12 @@
     (pin "1" (uuid fc3982f6-ca11-49bd-9a9e-b4c812caa61c))
     (pin "2" (uuid 5d3ef10b-fb9c-46eb-a79b-6273da19c18a))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "C12") (unit 1)
+          (reference "C13") (unit 1)
         )
       )
     )
@@ -3330,7 +3335,7 @@
     )
     (pin "1" (uuid 4676e134-7f41-4500-be5e-2abd9e7b8df5))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "#PWR022") (unit 1)
         )
@@ -3355,7 +3360,7 @@
     )
     (pin "1" (uuid 389f0799-c645-4432-85c9-6bc77d1bc0cd))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "#PWR020") (unit 1)
         )
@@ -3366,7 +3371,7 @@
   (symbol (lib_id "power:GND") (at 71.12 165.1 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 51dfa34b-28ca-481f-b23e-cc3d06b4ed34)
-    (property "Reference" "#PWR09" (at 77.47 165.1 0)
+    (property "Reference" "#PWR06" (at 77.47 165.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 75.5142 164.973 0)
@@ -3380,9 +3385,9 @@
     )
     (pin "1" (uuid 583f8aca-428d-404e-9e34-91390c9876e3))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -3391,7 +3396,7 @@
   (symbol (lib_id "Device:R") (at 137.16 125.73 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 613fe386-8121-44e5-9501-06bb9924d9eb)
-    (property "Reference" "R6" (at 138.3284 127.508 0)
+    (property "Reference" "R4" (at 138.3284 127.508 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1k" (at 136.017 127.508 0)
@@ -3406,9 +3411,9 @@
     (pin "1" (uuid 853478f9-593e-4b74-9b89-666b2aba1dba))
     (pin "2" (uuid e843eca4-4f55-4b39-b631-bc5884d8344e))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "R6") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -3417,7 +3422,7 @@
   (symbol (lib_id "power:+1V1") (at 163.83 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6315f87b-d325-40da-8ebe-55834f033ce2)
-    (property "Reference" "#PWR015" (at 163.83 53.34 0)
+    (property "Reference" "#PWR014" (at 163.83 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+1V1" (at 163.83 46.0281 0)
@@ -3431,9 +3436,9 @@
     )
     (pin "1" (uuid 307b1659-2129-44f2-b65d-1fce8dc9bc3b))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -3442,7 +3447,7 @@
   (symbol (lib_id "power:+3V3") (at 140.97 17.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 65623f0f-ccf2-4a88-a6ae-16c790124373)
-    (property "Reference" "#PWR014" (at 140.97 21.59 0)
+    (property "Reference" "#PWR011" (at 140.97 21.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 141.351 13.3858 0)
@@ -3456,9 +3461,9 @@
     )
     (pin "1" (uuid 45f08924-d65a-42d8-8d4c-96507bfd7c04))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -3467,7 +3472,7 @@
   (symbol (lib_id "Memory_Flash:W25Q128JVS") (at 53.34 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 662b6c9a-51d6-440e-bf77-05af88acea43)
-    (property "Reference" "U2" (at 55.3594 163.9402 0)
+    (property "Reference" "U1" (at 55.3594 163.9402 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "W25Q128JVS" (at 55.3594 166.4771 0)
@@ -3479,6 +3484,9 @@
     (property "Datasheet" "http://www.winbond.com/resource-files/w25q128jv_dtr%20revc%2003272018%20plus.pdf" (at 53.34 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C97521" (at 53.34 175.26 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 6e7222b2-1ac1-4d59-ad21-8142fd38e519))
     (pin "2" (uuid be347dfe-1768-4cfb-a129-af60df083e75))
     (pin "3" (uuid a6e491ca-e643-40ae-b040-363d52a40531))
@@ -3488,9 +3496,9 @@
     (pin "7" (uuid a661a749-5958-4197-9ef0-d25b4bf2a465))
     (pin "8" (uuid 1cc1775a-6db7-42a2-a407-b7d26966e455))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "U2") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -3499,7 +3507,7 @@
   (symbol (lib_id "power:GND") (at 167.64 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6da954b8-eee2-450e-8e70-36cf267bbe7d)
-    (property "Reference" "#PWR016" (at 167.64 161.29 0)
+    (property "Reference" "#PWR015" (at 167.64 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 167.767 159.3342 0)
@@ -3513,9 +3521,9 @@
     )
     (pin "1" (uuid 1a008c1c-18f9-4f57-8915-2636a50cad5d))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -3524,7 +3532,7 @@
   (symbol (lib_id "power:GND") (at 121.92 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7392dd0c-c3a1-40e8-94c0-18ebe4dde482)
-    (property "Reference" "#PWR011" (at 121.92 133.35 0)
+    (property "Reference" "#PWR08" (at 121.92 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 122.047 131.3942 0)
@@ -3538,16 +3546,16 @@
     )
     (pin "1" (uuid 8f03e77a-90a9-4b6a-9295-1a8a165eedb7))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 242.57 62.23 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp yes)
     (uuid 7721b5f8-a811-496a-8e69-ed56bf52d269)
     (property "Reference" "J2" (at 244.6528 54.1782 0)
       (effects (font (size 1.27 1.27)))
@@ -3564,7 +3572,7 @@
     (pin "1" (uuid 603fbe9f-4cc1-44ed-b88f-5b06498fb15a))
     (pin "2" (uuid 0f2f1fe6-a44c-4dad-a2ee-a5b375c490c6))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "J2") (unit 1)
         )
@@ -3590,7 +3598,7 @@
     (pin "1" (uuid 8addbe20-f2b0-4fd8-b00a-d96e30cb6df5))
     (pin "2" (uuid 5f9c5925-6112-4c6a-8f60-76b790298289))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
@@ -3616,10 +3624,13 @@
     (property "Datasheet" "~" (at 127 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C1644" (at 127 115.57 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid a575d47d-40d8-43c5-9fc9-ade8707bfe82))
     (pin "2" (uuid dcd196f1-b3f1-4da5-aedd-34a08ddc1100))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
@@ -3633,7 +3644,7 @@
   (symbol (lib_id "power:GND") (at 139.7 120.65 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8d18c1fb-0c28-4852-aa09-3d10bc4c403b)
-    (property "Reference" "#PWR012" (at 146.05 120.65 0)
+    (property "Reference" "#PWR09" (at 146.05 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 144.0942 120.523 0)
@@ -3647,9 +3658,9 @@
     )
     (pin "1" (uuid f0d3a4f6-90d6-40b8-a695-3810d02c1fa6))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -3658,7 +3669,7 @@
   (symbol (lib_id "power:GND") (at 139.7 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9056c4a0-01af-4fac-8677-74dfd45a6acb)
-    (property "Reference" "#PWR013" (at 139.7 153.67 0)
+    (property "Reference" "#PWR010" (at 139.7 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 139.827 151.7142 0)
@@ -3672,9 +3683,9 @@
     )
     (pin "1" (uuid 494256b4-a6e0-496c-82b6-10d1b428a40a))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -3698,7 +3709,7 @@
     (pin "1" (uuid f775a381-cecd-4bda-9320-6105684df67f))
     (pin "2" (uuid bfb50fe2-85ab-43dc-a14a-3714c44f8223))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
@@ -3712,7 +3723,7 @@
   (symbol (lib_id "power:+3V3") (at 262.89 82.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9ff17db9-33b8-417b-a76d-b84175899349)
-    (property "Reference" "#PWR064" (at 262.89 86.36 0)
+    (property "Reference" "#PWR023" (at 262.89 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 263.271 78.1558 0)
@@ -3726,9 +3737,9 @@
     )
     (pin "1" (uuid 627878f3-b982-4cb9-8438-9c472500ce6b))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR064") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -3737,7 +3748,7 @@
   (symbol (lib_id "Device:R") (at 128.27 82.55 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a222048d-7f11-4fb3-b171-4d9f476fab2e)
-    (property "Reference" "R5" (at 128.27 77.47 90)
+    (property "Reference" "R3" (at 128.27 77.47 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "27R" (at 128.27 80.01 90)
@@ -3752,9 +3763,9 @@
     (pin "1" (uuid 1bae066c-1709-470d-a523-18123484283f))
     (pin "2" (uuid 6d85b61c-88ad-4c82-9e44-e678c6249b86))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "R5") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -3763,7 +3774,7 @@
   (symbol (lib_id "power:+3V3") (at 53.34 153.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ab4b958e-c256-4222-af96-57b63a6ae987)
-    (property "Reference" "#PWR07" (at 53.34 157.48 0)
+    (property "Reference" "#PWR04" (at 53.34 157.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 53.721 149.2758 0)
@@ -3777,9 +3788,9 @@
     )
     (pin "1" (uuid 5741504b-3ec6-4197-8530-7d5415ec57f1))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -3803,12 +3814,12 @@
     (pin "1" (uuid 3f56feb8-4585-4ca6-8cd6-3bafeb971fd5))
     (pin "2" (uuid 045927fd-5651-4ba5-b66f-e3b867c2e603))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "C2") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
     )
@@ -3832,19 +3843,19 @@
     (pin "1" (uuid c407599f-2729-4c4a-8de2-df3e8931a799))
     (pin "2" (uuid 5861f8f8-3853-49a8-8a13-002eb579f9e8))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "C25") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
     )
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 121.92 92.71 90) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid b81e0257-2005-42c0-8bbd-083b8a8a5966)
     (property "Reference" "JP1" (at 120.1928 91.5416 90)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3861,7 +3872,7 @@
     (pin "1" (uuid 1828440e-4aad-4844-80f4-2dad2e3ad109))
     (pin "2" (uuid b68a9fb0-bc7c-41b3-9090-118f0c247dec))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "JP1") (unit 1)
         )
@@ -3886,7 +3897,7 @@
     )
     (pin "1" (uuid dc75f68b-ac92-4f1a-8e5d-feef6f8f7c24))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "#PWR021") (unit 1)
         )
@@ -3911,7 +3922,7 @@
     )
     (pin "1" (uuid 7fd56956-038d-4005-a7c9-7a28c9dcf14f))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "#PWR02") (unit 1)
         )
@@ -3937,12 +3948,12 @@
     (pin "1" (uuid 28fc3ca4-6852-4f94-9a90-e740fdd06fea))
     (pin "2" (uuid fd91fbc6-089b-478f-bc9d-03e2bb14a100))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "C26") (unit 1)
+          (reference "C11") (unit 1)
         )
       )
     )
@@ -3951,7 +3962,7 @@
   (symbol (lib_id "Device:R") (at 38.1 166.37 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d146fea1-8bdf-4182-87c9-2bf55b062d82)
-    (property "Reference" "R2" (at 36.322 167.5384 0)
+    (property "Reference" "R1" (at 36.322 167.5384 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 36.322 165.227 0)
@@ -3966,9 +3977,9 @@
     (pin "1" (uuid 9cf025da-d25e-4575-bd83-c47d57729797))
     (pin "2" (uuid 901e2975-f315-47f5-86e5-3f565e5d7992))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "R2") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -3977,7 +3988,7 @@
   (symbol (lib_id "Device:R") (at 262.89 137.16 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d862b51d-fb5e-4527-9655-45c01d3141b0)
-    (property "Reference" "R9" (at 261.112 138.3284 0)
+    (property "Reference" "R6" (at 261.112 138.3284 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 261.112 136.017 0)
@@ -3992,9 +4003,9 @@
     (pin "1" (uuid 95d6e7a3-6d95-48cf-9f70-fb33f3bd538a))
     (pin "2" (uuid 9950cc6e-bde2-4ee5-b570-6052a6efa52d))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "R9") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -4018,12 +4029,12 @@
     (pin "1" (uuid 6a167396-5f6e-45ab-948e-5db4ba665ae2))
     (pin "2" (uuid 388094a5-0667-4579-a489-2b2917a863ca))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "C24") (unit 1)
+          (reference "C14") (unit 1)
         )
       )
     )
@@ -4032,7 +4043,7 @@
   (symbol (lib_id "Device:R") (at 128.27 73.66 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dcd96bb4-5c83-46d1-a4c4-42af90239757)
-    (property "Reference" "R4" (at 128.27 68.58 90)
+    (property "Reference" "R2" (at 128.27 68.58 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "27R" (at 128.27 71.12 90)
@@ -4047,9 +4058,9 @@
     (pin "1" (uuid 30e1c1a2-ec55-46f5-aaa5-36ff5e95a80a))
     (pin "2" (uuid 94f9c045-5af9-4fb4-b34a-04cbd68c86d8))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "R4") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -4058,7 +4069,7 @@
   (symbol (lib_id "power:GND") (at 121.92 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e5ff8fa4-a9a2-41c6-966f-cbb16cd8c72a)
-    (property "Reference" "#PWR063" (at 121.92 104.14 0)
+    (property "Reference" "#PWR07" (at 121.92 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 122.047 102.1842 0)
@@ -4072,9 +4083,9 @@
     )
     (pin "1" (uuid a4908007-ec06-4220-944e-e818c5344e29))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR063") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -4083,7 +4094,7 @@
   (symbol (lib_id "power:+3V3") (at 262.89 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f52ed5ab-3abd-420d-a9e3-d5d8ea1a543a)
-    (property "Reference" "#PWR023" (at 262.89 135.89 0)
+    (property "Reference" "#PWR025" (at 262.89 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 263.271 127.6858 0)
@@ -4097,9 +4108,9 @@
     )
     (pin "1" (uuid 11429f02-99dc-443a-9f55-ffabe6f7e40a))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -4123,12 +4134,12 @@
     (pin "1" (uuid 3527517b-4c04-4317-96e5-ae7639aaf2e3))
     (pin "2" (uuid 4dcc6e49-7950-4426-8962-665fc3d7469f))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "C11") (unit 1)
+          (reference "C12") (unit 1)
         )
       )
     )
@@ -4149,12 +4160,15 @@
     (property "Datasheet" "~" (at 132.08 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C668845" (at 132.08 120.65 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 44185190-15ed-49b8-ad7e-127ef4fe4c04))
     (pin "2" (uuid f1824555-a8c4-47ba-8043-82ffeb7866d9))
     (pin "3" (uuid ba253450-e3c4-43a0-9b8c-01facd8c9f33))
     (pin "4" (uuid 76a6b56e-d75e-4c1d-8f30-9bf3ae2bdfaf))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
           (reference "Y1") (unit 1)
         )
@@ -4180,7 +4194,7 @@
     (pin "1" (uuid 49ba838a-9b55-4320-9648-5721115107cc))
     (pin "2" (uuid 99183325-0d61-41ae-ac04-245c7431114f))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/1eed7487-ede3-48fa-a47f-671585e72d34"
           (reference "C3") (unit 1)
         )
@@ -4194,7 +4208,7 @@
   (symbol (lib_id "power:GND") (at 53.34 186.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ff12f652-501d-4f7a-a092-7ae8dd053a19)
-    (property "Reference" "#PWR08" (at 53.34 193.04 0)
+    (property "Reference" "#PWR05" (at 53.34 193.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 53.467 191.0842 0)
@@ -4208,9 +4222,9 @@
     )
     (pin "1" (uuid 6b10aa30-0377-48a3-884d-32ea54d7dc2c))
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e/7814998b-2ec4-4ba1-81ae-f3ffbead2be9"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )

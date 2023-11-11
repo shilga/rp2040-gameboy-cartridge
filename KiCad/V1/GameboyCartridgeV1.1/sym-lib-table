@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Gameboy")(type "Legacy")(uri "${KIPRJMOD}/../../../Lib/Gameboy/Symbols/Gameboy.lib")(options "")(descr ""))
+  (lib (name "MCP1825T-3302E_DC")(type "KiCad")(uri "${KIPRJMOD}/../../../Lib/SnapEDA/MCP1825T-3302E_DC.kicad_sym")(options "")(descr ""))
+)

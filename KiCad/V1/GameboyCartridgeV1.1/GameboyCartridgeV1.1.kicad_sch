@@ -19,7 +19,7 @@
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e" (page "3"))
       )
     )
@@ -36,7 +36,7 @@
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
-      (project "GameboyCartridgeV1.0"
+      (project "GameboyCartridgeV1.1"
         (path "/29c97174-46f8-4c48-b4a7-5a1e45e73b0e" (page "2"))
       )
     )
